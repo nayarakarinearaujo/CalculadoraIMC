@@ -39,6 +39,8 @@ Este projeto é uma **Calculadora de Índice de Massa Corporal (IMC)** simples q
 
 - Se algum dos campos estiver vazio, uma mensagem de erro será exibida solicitando o preenchimento dos campos.
 
+[DEMO](https://calculadora-imc-livid-two.vercel.app/)
+
 ## Exemplo
 
 ![Calculadora de IMC](CalculadoraIMC.png)
