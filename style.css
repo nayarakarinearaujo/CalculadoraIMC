@@ -1,9 +1,11 @@
 body {
   background-image: url("imagemFundo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: cover; /* Garante que a imagem cubra o fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
   font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -17,7 +19,8 @@ section {
   background: white;
   border-radius: 10px;
   padding: 15px;
-  width: 500px;
+  width: 90%; /* Ajuste a largura para ser responsiva */
+  max-width: 500px; /* Limite a largura máxima */
   margin: auto;
   margin-top: 10%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
@@ -34,32 +37,33 @@ div {
 }
 
 input[type="number"] {
-    width: calc(100% - 20px); /* Ajuste conforme necessário */
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+  width: 100%; /* Ajuste a largura para preencher o contêiner */
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 input[type="number"]:focus {
-    border-color: #8f469f;
-    box-shadow: 0 0 5px #6f367c;
+  border-color: #8f469f;
+  box-shadow: 0 0 5px #6f367c;
 }
-
 
 button {
   background: #46b2c1;
   color: white;
   padding: 15px;
-  width: 150px;
+  width: 100%; /* Ajuste a largura para preencher o contêiner */
+  max-width: 150px; /* Limite a largura máxima */
   border: none;
   border-radius: 4px;
+  margin: 10px 0; /* Adicione margens para separar o botão de outros elementos */
 }
 
 button:hover {
@@ -68,12 +72,47 @@ button:hover {
 }
 
 #resultado {
-    margin-top: 15px;
-    background: #e5e4e4;
-    border-radius: 4px;
-    padding: 8px;
-    border: #bbdce4;
-    height: 50px;
-    line-height: 1.6; /* Ajusta o espaçamento entre linhas do texto */
+  margin-top: 15px;
+  background: #e5e4e4;
+  border-radius: 4px;
+  padding: 8px;
+  border: #bbdce4;
+  height: 50px;
+  line-height: 1.6;
+}
 
+/* Consultas de mídia para dispositivos menores */
+@media (max-width: 768px) {
+  section {
+    width: 95%; /* Ajusta a largura da seção para telas menores */
+    margin-top: 5%;
+    padding: 10px; /* Ajusta o padding da seção */
+  }
+
+  button {
+    width: 100%; /* Ajusta a largura do botão para telas menores */
+    padding: 12px; /* Ajusta o padding do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 100%; /* Ajusta a largura da seção para telas muito pequenas */
+    margin-top: 5%;
+    padding: 8px; /* Ajusta o padding da seção */
+  }
+
+  input[type="number"] {
+    font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  button {
+    font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    padding: 10px; /* Ajusta o padding do botão */
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+  }
+
+  #resultado {
+    font-size: 14px; /* Ajusta o tamanho da fonte para o resultado */
+  }
 }
