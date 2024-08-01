@@ -43,4 +43,4 @@ Este projeto é uma **Calculadora de Índice de Massa Corporal (IMC)** simples q
 
 ## Exemplo
 
-![Calculadora de IMC](calculadoraImc.png)
+![Calculadora de IMC](CalculadoraIMC.png)
